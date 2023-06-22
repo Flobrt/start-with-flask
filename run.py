@@ -122,7 +122,7 @@ def machine_learning():
 @app.route('/canvas', methods=['GET', 'POST'])
 def canvas():
     if request.method == 'POST':
-        path = 'static/model.pkl'  # Chemin complet du modèle sauvegardé    
+        path = 'static/model.joblib'  # Chemin complet du modèle sauvegardé    
         loaded_model = joblib.load(path)
 
         image_data = request.form['image']
