@@ -1,0 +1,49 @@
+body {
+    background-color: blue;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+h1 {
+    margin: 0 0 10px;
+    color: red;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+header {
+    border: solid 1px #000;
+    margin: 20px
+}
+
+td {
+    color: white;
+}
+th {
+    color: red;
+}
+
+.nav-list {
+    list-style: none; /* Supprime les puces */
+    display: inline-block; /* Met les éléments en ligne */
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+  }
+
+.nav-list li {
+    display: inline; /* Met chaque élément de liste en ligne */
+    margin-right: 10px; /* Ajoute un espace entre les éléments */
+}
+
+/* center with absolute position */
+#resultat-dataframe, #resultat-ml {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

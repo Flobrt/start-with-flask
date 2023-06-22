@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock %}
+{% block content %}
+    <form action="" method="POST">
+        <label for="prenom">prenom</label>
+        <input type="text" name="prenom" id="prenom" required>
+        <label for="nom">nom</label>
+        <input type="text" name="nom" id="nom" required>
+        <label for="gender">Genre :</label>
+            <select id="gender" name="gender" required>
+                <option value="female">Femme</option>
+                <option value="male">Homme</option>
+            </select>
+        <label for="pseudo">pseudo</label>
+        <input type="text" name="pseudo" id="pseudo" required>
+        <button type="submit">OK</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %} Resultat formulaire {% endblock %}
+{% block content %}
+        {% if sexe == "Femme" %}
+            <p>Bonjour Madame {{prenom}} {{nom}}, votre nom d'utilisateur est {{pseudo}}.</p>
+        {% else %}
+            <p>Bonjour Monsieur {{prenom}} {{nom}}, votre nom d'utilisateur est {{pseudo}}.</p>
+        {% endif %}
+{% endblock %}

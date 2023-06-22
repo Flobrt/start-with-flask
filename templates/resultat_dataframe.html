@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %} Resultat dataframe {% endblock %}
+{% block content %}
+    <table id="resultat-dataframe">
+        <thead>
+            <tr>
+                <th>Index</th>
+                {% for col in result.columns %}
+                    <th>{{ col }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, row in result.iterrows() %}
+                <tr>
+                    <td>{{ index }}</td>
+                    {% for col in result.columns %}
+                        <td>{{ row[col] }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

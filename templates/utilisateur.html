@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %} Utilisateur {% endblock %}
+{% block content %}
+    {% if error %}
+        <p>{{ error }}</p>
+        <a href="{{url_for('utilisateur')}}">Retour</a>
+    {% else %}
+    <h1>Ajoutez un utilisateur :</h1>
+    <form action="" method="POST">
+        <label for="prenom">prenom</label>
+        <input type="text" name="prenom" id="prenom">
+        <label for="nom">nom</label>
+        <input type="text" name="nom" id="nom">
+        <label for="gender">Genre :</label>
+            <select id="gender" name="gender" required>
+                <option value="female">Femme</option>
+                <option value="male">Homme</option>
+            </select>
+        <label for="pseudo">pseudo</label>
+        <input type="text" name="pseudo" id="pseudo">
+        <button type="submit">OK</button>
+    </form>
+    <ul>
+        {% for user in users %}
+            <li>
+                <ul>
+                    <li style="color: red;">Nom : {{ user[1] }}</li>
+                    <li style="color: red;">Prénom : {{ user[2] }}</li>
+                    <li style="color: red;">Pseudo : {{ user[3] }}</li>
+                    <li style="color: red;">Sexe : {{ user[4] }}</li>
+                </ul>
+            </li>
+            <br>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

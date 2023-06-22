@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css" media="screen" /> 
+    <title>Flask APP - {% block title %} {% endblock %}</title>
+</head>
+<body> 
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href={{url_for('index')}}>Home</a></li>
+                <li><a href={{url_for('Page2')}}>Page2</a></li>
+                <li><a href={{url_for('formulaire')}}>Formulaire</a></li>
+                <li><a href={{url_for('utilisateur')}}>Utilisateur</a></li>
+                <li><a href={{url_for('dataframe')}}>Dataframe</a></li>
+                <li><a href={{url_for('machine_learning')}}>Machine Learning</a></li>
+                <li><a href={{url_for('canvas')}}>Canvas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %} {% endblock %}
+    </main>
+</body>
+</html>
