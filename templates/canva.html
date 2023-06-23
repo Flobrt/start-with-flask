@@ -3,11 +3,11 @@
 {% block content %}
     <h1>Canva</h1>
     <h1>Reconnaissance de chiffres</h1>
-    <form>
-        <canvas id="canvas" width="580" height="580" style="border: solid 1px black"></canvas>
+    <form method="post" action="">
+        <canvas id="canvas" width="580" height="580" style="border: solid 1px black" name="image"></canvas>
         <button onclick="clearCanvas()">Effacer</button>
         <!-- <button id="guess-button" type="submit">Deviner</button> -->
-        <button type="button" onclick="submitCanvas()">Deviner</button>
+        <button type="submit">Deviner</button>
     </form>
 
     <script>
